@@ -1,38 +1,324 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600;700&display=swap");
+
+:root {
+  --green: #4dba87;
+  --gray: #777777;
+  --dark-bg: #25262a;
+  --light-bg: #2d2e32;
+  --white: #ffffff;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Mono";
+}
+.green-text {
+  color: var(--green);
+}
+section {
+  padding: 5rem 5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  color: var(--light-bg);
+  background: var(--green);
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  border-radius: 0.25rem;
+}
+button:hover {
+  cursor: text;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* vertical and horizontal spacing */
+.space-x-rem > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.3rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.3rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(3rem * var(--tw-space-x-reverse));
+  margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(10rem * var(--tw-space-x-reverse));
+  margin-left: calc(10rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-top: calc(3rem * var(--tw-space-x-reverse));
+  margin-bottom: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-top: calc(8rem * var(--tw-space-x-reverse));
+  margin-bottom: calc(8rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+/* utils */
+.marg-top-1 {
+  margin-top: 0.75rem;
+}
+.marg-top-2 {
+  margin-top: 1.3rem;
+}
+/* header */
+header {
+  padding: 0rem 5rem;
+  background: var(--light-bg);
+  color: var(--white);
+}
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 1.7rem;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.info {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 2.2rem;
+}
+.info-1 h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+.info-1 p {
+  color: var(--gray);
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+.info-1 h2 {
+  font-size: 1.2rem;
+  color: var(--green);
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-top: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.info-img {
+  width: 40%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.info-img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* about */
+#about {
+  background: var(--dark-bg);
+}
+.about-info {
+  display: flex;
+}
+
+.about-info-1 {
+  width: 60%;
+  padding: 2.7rem 1.3rem 2rem;
+}
+.about-info-1 p {
+  color: var(--gray);
+}
+.about-info-1 p:nth-child(1) {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.about-info-1 h1 {
+  color: var(--white);
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.about-info-1 h3 {
+  margin-top: 2rem;
+  color: var(--white);
+  font-style: italic;
+  font-size: 1.3rem;
+}
+.about-info-1 p:nth-child(4) {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.about-cards {
+  width: 50%;
+}
+.about-card {
+  display: flex;
+  justify-content: space-between;
+  background: var(--light-bg);
+  margin-top: 0.5rem;
+  padding: 1.9rem 2rem;
+  border-radius: 0.7rem;
+}
+.about-card-1 h2 {
+  color: var(--green);
+  font-weight: 600;
+}
+.about-card-1 p:nth-child(2) {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--white);
+  font-weight: 600;
+}
+.about-card-1 p:nth-child(3) {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+.about-card-icon {
+  width: 1rem;
+}
+.about-card-icon img {
+  width: 100%;
+}
+
+.partner {
+  display: flex;
+  padding-top: 4rem;
+}
+
+.pat-img {
+  width: 12rem;
+}
+.pat-img img {
+  width: 100%;
+}
+
+/* footer */
+
+footer {
+  background: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 5rem;
+  color: var(--white);
+}
+.copyright h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.foot-icons {
+  display: flex;
+  align-items: center;
+}
+.foot-icon {
+  width: 1.32rem;
+  object-fit: contain;
+}
+.foot-icon img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 760px) {
+  section {
+    padding: 1.4rem 2.4rem;
   }
-  to {
-    transform: rotate(360deg);
+  /* header */
+  header {
+    padding: 0rem 2.4rem;
+  }
+  nav ul {
+    display: none;
+  }
+  .info {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .info-img {
+    width: 100%;
+    margin-top: 1.4rem;
+  }
+  /* about */
+  .about-info {
+    flex-direction: column;
+  }
+
+  .about-cards {
+    width: 100%;
+  }
+  .about-info-1 {
+    width: 100%;
+    padding: 2rem 0px;
+  }
+
+  .partner {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+  }
+  .foot-icons {
+    margin-top: 1rem;
+  }
+  /* vertical and horizontal spacing */
+
+  .space-x-1 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0px * var(--tw-space-x-reverse));
+    margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .space-x > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0px * var(--tw-space-x-reverse));
+    margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+  }
+  .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0px * var(--tw-space-x-reverse));
+    margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .space-y > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-top: calc(0px * var(--tw-space-x-reverse));
+    margin-bottom: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+  }
+  .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-top: calc(0px * var(--tw-space-x-reverse));
+    margin-bottom: calc(0px * calc(1 - var(--tw-space-x-reverse)));
   }
 }
