@@ -306,6 +306,12 @@ footer {
   width: 100%;
 }
 
+/* The blogpost */
+.react-markdown code {
+  font-weight: 500;
+  font-size: 16px;
+}
+
 @media only screen and (max-width: 760px) {
   section {
     padding: 1.4rem 2.4rem;

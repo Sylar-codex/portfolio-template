@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
+import { Link } from "react-router-dom";
 import blaiti from "../assets/images/blaiti.png";
 
 function Header() {
@@ -16,7 +17,9 @@ function Header() {
           <p>
             I design and code beautiful simple things, and I love what I do.
           </p>
-          <h2>Let's chat!</h2>
+          <Link to="/blog-posts">
+            <h2>check my blog!</h2>
+          </Link>
         </div>
         <div className="info-img">
           <img src={blaiti} alt="" />

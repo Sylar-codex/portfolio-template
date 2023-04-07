@@ -1,19 +1,17 @@
 import React, { Fragment } from "react";
-import logo from "./logo.svg";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
-import About from "./components/About";
-import Footer from "./components/Footer";
-import Blog from "./components/Blog";
+import Home from "./components/Home";
+import BlogPost from "./components/blog/BlogPost";
+import BlogPage from "./components/blog/BlogPage";
 
 function App() {
   return (
-    <Fragment>
-      <Header />
-      <About />
-      <Blog />
-      <Footer />
-    </Fragment>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/blog-posts" element={<BlogPost />} />
+      <Route path="/blog-page/:name" element={<BlogPage />} />
+    </Routes>
   );
 }
 
