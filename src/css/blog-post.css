@@ -6,7 +6,7 @@
   --white: #ffffff;
   --blog-post-bg: #e9e9eb;
 }
-
+/* blog post */
 .blog-post {
   background: var(--blog-post-bg);
   padding: 1rem;
