@@ -20,9 +20,13 @@
   height: 10rem;
 }
 
-.post-img {
+.post-img-div {
   height: 100%;
   width: 25%;
+}
+.post-img {
+  height: 100%;
+  width: 100%;
 }
 .post-img img {
   width: 100%;
@@ -35,6 +39,10 @@
   min-height: 90%;
   margin-left: 1.75rem;
 }
+.post-info h2:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 .post-content {
   margin-top: 0.3rem;
 }
@@ -42,15 +50,49 @@
   margin-top: 1rem;
   font-size: 13px;
 }
+
+/* paginate component */
+.page-numbers {
+  display: flex;
+  padding-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blog-post-bg);
+  width: 100%;
+}
+
+.page-numbers ul {
+  gap: 0.3rem;
+  display: flex;
+}
+
+.page-numbers ul li {
+  background: var(--white);
+  padding: 0.5rem;
+  text-align: center;
+}
+.page-numbers ul li:hover {
+  cursor: pointer;
+}
+
+.active-page {
+  background-color: var(--green) !important;
+  color: var(--white);
+}
+
 /* blog-page */
 .blog-page {
   background: var(--blog-post-bg);
   padding: 1rem;
 }
-.page-img {
+.page-img-div {
   width: 70%;
   height: 25rem;
   margin: auto;
+}
+.page-img {
+  width: 100%;
+  height: 100%;
 }
 .page-img img {
   width: 100%;
@@ -93,7 +135,62 @@ p {
   padding: 0.76rem;
   background-color: var(--gray);
   color: var(--white);
+  width: 100%;
+  overflow-y: scroll;
+}
+.markdown-post {
+  font-size: 14px;
 }
 .markdown-post p {
   margin: 0px;
+}
+
+@media only screen and (max-width: 760px) {
+  .card {
+    flex-direction: column;
+    margin-top: 2rem;
+    align-items: flex-start;
+    height: fit-content;
+  }
+
+  .post-img-div {
+    height: 15rem;
+    width: 100%;
+  }
+  .post-img {
+    height: 100%;
+    width: 100%;
+  }
+  .post-img img {
+    border-radius: 8px 8px 0px 0px;
+  }
+
+  .post-info {
+    width: 100%;
+    min-height: 90%;
+    margin-left: 0;
+    padding: 0 0.57rem;
+  }
+  .post-content {
+    margin-top: 0.3rem;
+  }
+  .date-info {
+    margin-top: 1rem;
+    font-size: 13px;
+  }
+  /* blog-page */
+
+  .page-img-div {
+    width: 100%;
+    height: 15rem;
+  }
+  .page-img {
+    width: 100%;
+    height: 100%;
+  }
+  .page-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }

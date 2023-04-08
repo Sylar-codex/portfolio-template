@@ -39,15 +39,17 @@ function BlogPage() {
 
   return (
     <div className="blog-page">
-      <div className={blogPageContent.img ? "page-img" : ""}>
-        {blogPageContent.img &&
-          (blogPageContent.img.substring(0, 6) === "https" ? (
-            <img src={blogPageContent.img} />
-          ) : (
-            <img
-              src={require(`../../content/assets/img/${blogPageContent.img}`)}
-            />
-          ))}
+      <div className={blogPageContent.img ? "page-img-div" : ""}>
+        <div className={blogPageContent.img ? "page-img" : ""}>
+          {blogPageContent.img &&
+            (blogPageContent.img.substring(0, 6) === "https" ? (
+              <img src={blogPageContent.img} />
+            ) : (
+              <img
+                src={require(`../../content/assets/img/${blogPageContent.img}`)}
+              />
+            ))}
+        </div>
       </div>
       <div className="page-content">
         <h2 className="content-title"> {blogPageContent.title} </h2>
