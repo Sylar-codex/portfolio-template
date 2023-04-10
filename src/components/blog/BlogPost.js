@@ -41,6 +41,7 @@ function BlogPost({ posts }) {
             </div>
             <div className="post-info">
               <h2
+                className="green-text"
                 onClick={() => {
                   navigate(`/blog-page/${post.title}`);
                 }}
