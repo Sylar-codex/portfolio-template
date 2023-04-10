@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
     <nav>
-      <div>
+      <Link to="/" className="link">
         <h2>Skander Blaiti</h2>
-      </div>
+      </Link>
       <div>
         <ul className="space-x">
           <li>

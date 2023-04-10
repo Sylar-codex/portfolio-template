@@ -18,6 +18,10 @@ body {
   margin: 0;
   font-family: "Roboto Mono";
 }
+.link {
+  text-decoration: none;
+  color: var(--white);
+}
 .green-text {
   color: var(--green);
 }
