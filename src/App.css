@@ -109,7 +109,8 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
-  padding-top: 1.7rem;
+  align-items: center;
+  padding-top: 1.3rem;
 }
 nav ul {
   display: flex;

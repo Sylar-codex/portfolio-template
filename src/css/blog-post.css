@@ -10,6 +10,7 @@
 .blog-post {
   background: var(--blog-post-bg);
   padding: 1rem;
+  padding-top: 8rem;
 }
 .card {
   display: flex;
@@ -84,6 +85,7 @@
 .blog-page {
   background: var(--blog-post-bg);
   padding: 1rem;
+  padding-top: 8rem;
 }
 .page-img-div {
   width: 70%;

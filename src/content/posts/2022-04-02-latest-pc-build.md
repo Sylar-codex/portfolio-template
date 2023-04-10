@@ -36,7 +36,7 @@ with microk8's and more docker images without issue soon enough. So, for anyone 
 
 ## CURRENT SETUP
 
-<img src="../assets/img/blog/2022-build/thinkpad.jpg" width="40%" height="40%">
+<img src="/assets/img/blog/2022-build/thinkpad.jpg" width="40%" height="40%">
 <img src="/assets/img/blog/2022-build/work-macbook.jpg" width="40%" height="40%">
 <img src="/assets/img/blog/2022-build/monitors.jpg" width="40%" height="40%">
 ## New Wallmounted Parts 
