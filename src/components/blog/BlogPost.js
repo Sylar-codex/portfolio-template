@@ -7,7 +7,7 @@ import NavBar from "../NavBar";
 function BlogPost({ posts }) {
   const navigate = useNavigate();
   const excerptList = posts.map((post) => {
-    return post.content.split(" ").slice(0, 14).join(" ");
+    return post.content.split(" ").slice(0, 20).join(" ");
   });
 
   return (
@@ -31,10 +31,11 @@ function BlogPost({ posts }) {
               <div className={post.img ? "post-img" : ""}>
                 {post.img &&
                   (post.img.substring(0, 6) === "https" ? (
-                    <img src={post.img} />
+                    <img src={post.img} alt="" />
                   ) : (
                     <img
                       src={require(`../../content/assets/img/${post.img}`)}
+                      alt=""
                     />
                   ))}
               </div>
@@ -61,6 +62,7 @@ function BlogPost({ posts }) {
                     h6: "span",
                     center: "span",
                     p: "span",
+                    pre: "span",
                     // Rewrite `em`s (`*like so*`) to `i` with a red foreground color.
                     em: ({ node, ...props }) => (
                       <i style={{ color: "red" }} {...props} />
@@ -68,9 +70,6 @@ function BlogPost({ posts }) {
                     a: ({ node }) => <i style={{ textDecoration: "none" }} />,
                     ul: ({ node }) => <i style={{ listStyle: "none" }} />,
                     img: ({ node }) => <i style={{ display: "none" }} />,
-                    img: ({ node }) => (
-                      <i style={{ marginTop: "0px", marginBottom: "0px" }} />
-                    ),
                   }}
                   children={excerptList[i].trim() + "..."}
                   rehypePlugins={[rehypeRaw]}

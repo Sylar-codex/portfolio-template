@@ -57,10 +57,11 @@ function BlogPage() {
           <div className={blogPageContent.img ? "page-img" : ""}>
             {blogPageContent.img &&
               (blogPageContent.img.substring(0, 6) === "https" ? (
-                <img src={blogPageContent.img} />
+                <img src={blogPageContent.img} alt="" />
               ) : (
                 <img
                   src={require(`../../content/assets/img/${blogPageContent.img}`)}
+                  alt=""
                 />
               ))}
           </div>

@@ -9,7 +9,7 @@ function AboutCard({ title, icon, desc, projects }) {
         <p>{projects.toString()} project</p>
       </div>
       <div className="about-card-icon">
-        <img src={icon} />
+        <img src={icon} alt="" />
       </div>
     </div>
   );

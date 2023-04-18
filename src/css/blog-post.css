@@ -53,12 +53,13 @@
   color: var(--gray);
 }
 .markdown-post {
-  font-size: 14px;
+  font-size: 15px;
 }
 
-.markdown-post span {
+.markdown-post {
   color: var(--gray);
 }
+
 .markdown-post p {
   margin: 0px;
 }
